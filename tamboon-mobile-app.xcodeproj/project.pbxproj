@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2909E92220C8E2530084790C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2909E92120C8E2530084790C /* AppDelegate.swift */; };
-		2909E92420C8E2530084790C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2909E92320C8E2530084790C /* ViewController.swift */; };
 		2909E92720C8E2530084790C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2909E92520C8E2530084790C /* Main.storyboard */; };
 		2909E92920C8E2580084790C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2909E92820C8E2580084790C /* Assets.xcassets */; };
 		2909E92C20C8E2580084790C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2909E92A20C8E2580084790C /* LaunchScreen.storyboard */; };
 		2909E93720C8E2580084790C /* tamboon_mobile_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2909E93620C8E2580084790C /* tamboon_mobile_appTests.swift */; };
 		2909E94220C8E2580084790C /* tamboon_mobile_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2909E94120C8E2580084790C /* tamboon_mobile_appUITests.swift */; };
+		2909E95520C8EA7F0084790C /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2909E95420C8EA7F0084790C /* MainVC.swift */; };
+		2909E95720C8EB610084790C /* Charities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2909E95620C8EB610084790C /* Charities.swift */; };
+		2909E95920C8EFDD0084790C /* Donations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2909E95820C8EFDD0084790C /* Donations.swift */; };
+		2909E95B20C8FBA70084790C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2909E95A20C8FBA70084790C /* DataService.swift */; };
+		2909E95D20C8FF690084790C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2909E95C20C8FF690084790C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,17 +40,21 @@
 /* Begin PBXFileReference section */
 		2909E91E20C8E2530084790C /* tamboon-mobile-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tamboon-mobile-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2909E92120C8E2530084790C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2909E92320C8E2530084790C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2909E92620C8E2530084790C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2909E92820C8E2580084790C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2909E92B20C8E2580084790C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2909E92D20C8E2580084790C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2909E92D20C8E2580084790C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		2909E93220C8E2580084790C /* tamboon-mobile-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tamboon-mobile-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2909E93620C8E2580084790C /* tamboon_mobile_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tamboon_mobile_appTests.swift; sourceTree = "<group>"; };
 		2909E93820C8E2580084790C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2909E93D20C8E2580084790C /* tamboon-mobile-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tamboon-mobile-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2909E94120C8E2580084790C /* tamboon_mobile_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tamboon_mobile_appUITests.swift; sourceTree = "<group>"; };
-		2909E94320C8E2580084790C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2909E94320C8E2580084790C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../tamboon-mobile-appUITests/Info.plist"; sourceTree = "<group>"; };
+		2909E95420C8EA7F0084790C /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		2909E95620C8EB610084790C /* Charities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charities.swift; sourceTree = "<group>"; };
+		2909E95820C8EFDD0084790C /* Donations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donations.swift; sourceTree = "<group>"; };
+		2909E95A20C8FBA70084790C /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		2909E95C20C8FF690084790C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,11 @@
 		2909E92020C8E2530084790C /* tamboon-mobile-app */ = {
 			isa = PBXGroup;
 			children = (
-				2909E92120C8E2530084790C /* AppDelegate.swift */,
-				2909E92320C8E2530084790C /* ViewController.swift */,
-				2909E92520C8E2530084790C /* Main.storyboard */,
-				2909E92820C8E2580084790C /* Assets.xcassets */,
-				2909E92A20C8E2580084790C /* LaunchScreen.storyboard */,
-				2909E92D20C8E2580084790C /* Info.plist */,
+				2909E95320C8E8A70084790C /* Controller */,
+				2909E95220C8E8960084790C /* Model */,
+				2909E95120C8E88D0084790C /* View */,
+				2909E95020C8E8810084790C /* Resources */,
+				2909E94F20C8E8750084790C /* Services */,
 			);
 			path = "tamboon-mobile-app";
 			sourceTree = "<group>";
@@ -111,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				2909E93620C8E2580084790C /* tamboon_mobile_appTests.swift */,
-				2909E93820C8E2580084790C /* Info.plist */,
 			);
 			path = "tamboon-mobile-appTests";
 			sourceTree = "<group>";
@@ -120,9 +126,55 @@
 			isa = PBXGroup;
 			children = (
 				2909E94120C8E2580084790C /* tamboon_mobile_appUITests.swift */,
-				2909E94320C8E2580084790C /* Info.plist */,
 			);
 			path = "tamboon-mobile-appUITests";
+			sourceTree = "<group>";
+		};
+		2909E94F20C8E8750084790C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2909E95A20C8FBA70084790C /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2909E95020C8E8810084790C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2909E93820C8E2580084790C /* Info.plist */,
+				2909E92D20C8E2580084790C /* Info.plist */,
+				2909E92820C8E2580084790C /* Assets.xcassets */,
+				2909E94320C8E2580084790C /* Info.plist */,
+				2909E95C20C8FF690084790C /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2909E95120C8E88D0084790C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2909E92520C8E2530084790C /* Main.storyboard */,
+				2909E92A20C8E2580084790C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2909E95220C8E8960084790C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2909E95620C8EB610084790C /* Charities.swift */,
+				2909E95820C8EFDD0084790C /* Donations.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2909E95320C8E8A70084790C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2909E92120C8E2530084790C /* AppDelegate.swift */,
+				2909E95420C8EA7F0084790C /* MainVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2909E92420C8E2530084790C /* ViewController.swift in Sources */,
+				2909E95720C8EB610084790C /* Charities.swift in Sources */,
+				2909E95920C8EFDD0084790C /* Donations.swift in Sources */,
 				2909E92220C8E2530084790C /* AppDelegate.swift in Sources */,
+				2909E95520C8EA7F0084790C /* MainVC.swift in Sources */,
+				2909E95B20C8FBA70084790C /* DataService.swift in Sources */,
+				2909E95D20C8FF690084790C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42Y7AR69Q9;
 				INFOPLIST_FILE = "tamboon-mobile-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42Y7AR69Q9;
 				INFOPLIST_FILE = "tamboon-mobile-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
