@@ -10,7 +10,6 @@ import Foundation
 
 struct Donations {
     
-    var id: String = ""
     var name: String = ""
     var token: String = ""
     var amount: Int?
@@ -26,7 +25,6 @@ struct Donations {
                 for contribution in contributions {
                     
                     var newContribution = Donations()
-                    newContribution.id = contribution["_id"] as! String
                     newContribution.name = contribution["name"] as! String
                     newContribution.token = contribution["token"] as! String
                     newContribution.amount = contribution["amount"] as? Int

@@ -17,3 +17,11 @@ let BASE_API_URL = "http://localhost:3005/v1"
 
 // Get all charities
 let GET_ALL_CH_URL = "\(BASE_API_URL)/charities/all"
+
+// Get all donations
+let GET_ALL_DONATIONS_URL = "\(BASE_API_URL)/donations/all"
+
+// Post new donation
+let POST_ADD_NEW_DONATION = "\(BASE_API_URL)/donations/add"
+
+
