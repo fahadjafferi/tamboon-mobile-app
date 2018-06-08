@@ -25,22 +25,37 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bUI-NI-Tbl">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vcD-vq-knY">
-                                                <rect key="frame" x="111" y="28" width="153" height="25.5"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="TAMBOON APP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSD-r4-OPV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="153" height="25.5"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKr-bl-l06">
+                                                <rect key="frame" x="307" y="23" width="60" height="30"/>
+                                                <state key="normal" title="DONATE">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oqv-nZ-Ubb"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="TAMBOON APP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSD-r4-OPV">
+                                                <rect key="frame" x="111" y="26" width="153" height="25.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="153" id="1vv-Vx-1qb"/>
+                                                    <constraint firstAttribute="width" constant="153" id="en0-2U-OjZ"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="153" id="pym-Of-rRd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.48627450980392156" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="XSD-r4-OPV" secondAttribute="bottom" constant="13.5" id="JGY-jR-62N"/>
+                                            <constraint firstItem="wKr-bl-l06" firstAttribute="top" secondItem="bUI-NI-Tbl" secondAttribute="top" constant="23" id="TSH-MH-F1C"/>
+                                            <constraint firstItem="XSD-r4-OPV" firstAttribute="leading" secondItem="bUI-NI-Tbl" secondAttribute="leading" constant="111" id="Xh4-re-8PX"/>
                                             <constraint firstAttribute="height" constant="65" id="cbb-Ts-CY6"/>
+                                            <constraint firstAttribute="trailing" secondItem="wKr-bl-l06" secondAttribute="trailing" constant="8" id="eIT-qv-qbg"/>
+                                            <constraint firstItem="XSD-r4-OPV" firstAttribute="top" secondItem="bUI-NI-Tbl" secondAttribute="top" constant="26" id="fEw-cL-z0I"/>
+                                            <constraint firstAttribute="bottom" secondItem="wKr-bl-l06" secondAttribute="bottom" constant="12" id="lkd-fM-8CA"/>
+                                            <constraint firstItem="wKr-bl-l06" firstAttribute="leading" secondItem="XSD-r4-OPV" secondAttribute="trailing" constant="43" id="rxa-5d-Nb1"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -92,6 +107,7 @@
                     <navigationItem key="navigationItem" id="cJN-Pp-zrH"/>
                     <connections>
                         <outlet property="tableView" destination="Ymq-JI-bGF" id="9xi-Pw-8KA"/>
+                        <segue destination="PN4-DO-rZi" kind="show" identifier="showAddDonations" id="OEK-63-d5D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -141,6 +157,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bya-wv-PcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="895" y="143"/>
+        </scene>
+        <!--Add Donations-->
+        <scene sceneID="k0l-X9-cih">
+            <objects>
+                <viewController id="PN4-DO-rZi" customClass="AddDonations" customModule="tamboon_mobile_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1a8-JH-Dbz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hQm-Lj-W7q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPJ-aR-2VT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="-582"/>
         </scene>
     </scenes>
 </document>

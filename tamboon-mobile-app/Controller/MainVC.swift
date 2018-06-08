@@ -11,7 +11,7 @@ import UIKit
 class MainVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var addButton: UIImageView!
+    
     
     var dataService = DataService.instance
 
@@ -24,6 +24,10 @@ class MainVC: UIViewController {
         tableView.dataSource = self 
 
         DataService.instance.getAllCharties()
+    }
+    
+    @IBAction func addButtonTapped(sender: UIButton) {
+        performSegue(withIdentifier: "showAddDonations", sender: self)
     }
 
 }

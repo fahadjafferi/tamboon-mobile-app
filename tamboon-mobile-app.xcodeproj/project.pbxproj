@@ -19,6 +19,7 @@
 		2909E95B20C8FBA70084790C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2909E95A20C8FBA70084790C /* DataService.swift */; };
 		2909E95D20C8FF690084790C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2909E95C20C8FF690084790C /* Constants.swift */; };
 		296D3B0420CA4101006D330E /* CharityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D3B0320CA4101006D330E /* CharityCell.swift */; };
+		296D3B0620CAC885006D330E /* AddDonations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D3B0520CAC885006D330E /* AddDonations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2909E95A20C8FBA70084790C /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		2909E95C20C8FF690084790C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		296D3B0320CA4101006D330E /* CharityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityCell.swift; sourceTree = "<group>"; };
+		296D3B0520CAC885006D330E /* AddDonations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDonations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			children = (
 				2909E92120C8E2530084790C /* AppDelegate.swift */,
 				2909E95420C8EA7F0084790C /* MainVC.swift */,
+				296D3B0520CAC885006D330E /* AddDonations.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				2909E95920C8EFDD0084790C /* Donations.swift in Sources */,
 				2909E92220C8E2530084790C /* AppDelegate.swift in Sources */,
 				2909E95520C8EA7F0084790C /* MainVC.swift in Sources */,
+				296D3B0620CAC885006D330E /* AddDonations.swift in Sources */,
 				2909E95B20C8FBA70084790C /* DataService.swift in Sources */,
 				2909E95D20C8FF690084790C /* Constants.swift in Sources */,
 			);
