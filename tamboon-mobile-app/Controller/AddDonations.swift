@@ -21,7 +21,39 @@ class AddDonations: UIViewController {
     }
     
     @IBAction func addButtonTapped(sender: UIButton) {
+        guard let name = nameField.text, nameField.text != ""
+            else {
+                showAlert(with: "Error", message: "Please enter your first and last name")
+            return
+        }
+        guard let token = tokenField.text, tokenField.text != ""
+            else {
+                showAlert(with: "Error", message: "Please enter a token")
+           return
+        }
+        guard let amount = Int(amountField.text!), amountField.text != ""
+            else {
+                showAlert(with: "Error", message: "Please enter a donation amount")
+            return
+        }
         
+        let alertController = UIAlertController(title: "Tamboon", message:
+            "Donation Successfull", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
+    
+      DataService.instance.addNewDonation(name, token: token, amount: amount, completion: {
+            Success in
+            
+            if Success {
+                print("We saved successfully")
+                self.dismissViewController()
+                } else {
+                self.showAlert(with: "Error", message: "An error occured while processing the donation amount")
+                print("We didn't process donation sucessfully")
+            }
+        })
     }
     
     @IBAction func cancelButtonTapped(sender: UIButton) {
@@ -38,5 +70,15 @@ class AddDonations: UIViewController {
             _ = self.navigationController?.popViewController(animated: true)
         }
     }
-
+    
+    func showAlert(with title: String?, message: String?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: . default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
+        
 }
+

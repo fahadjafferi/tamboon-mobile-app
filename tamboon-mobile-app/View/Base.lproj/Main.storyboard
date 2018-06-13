@@ -231,16 +231,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="175" translatesAutoresizingMaskIntoConstraints="NO" id="qUm-gN-RgY">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="175" translatesAutoresizingMaskIntoConstraints="NO" id="qUm-gN-RgY">
                                 <rect key="frame" x="27.5" y="263" width="320" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNd-22-9zZ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNd-22-9zZ">
                                         <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
                                         <state key="normal" title="Post Donation"/>
+                                        <connections>
+                                            <action selector="addButtonTappedWithSender:" destination="PN4-DO-rZi" eventType="touchUpInside" id="3Wh-ZW-0Ua"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AL-0J-wg8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AL-0J-wg8">
                                         <rect key="frame" x="272" y="0.0" width="48" height="30"/>
                                         <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelButtonTappedWithSender:" destination="PN4-DO-rZi" eventType="touchUpInside" id="C0d-4d-pcj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -251,6 +257,7 @@
                             <constraint firstItem="Qvj-nV-Qu7" firstAttribute="top" secondItem="jlO-J1-5J8" secondAttribute="bottom" constant="56" id="3x4-lP-r2x"/>
                             <constraint firstItem="EQr-y4-pPc" firstAttribute="centerX" secondItem="Qvj-nV-Qu7" secondAttribute="centerX" id="4fs-vp-TkX"/>
                             <constraint firstItem="jlO-J1-5J8" firstAttribute="top" secondItem="1a8-JH-Dbz" secondAttribute="top" id="5nJ-Vu-tkS"/>
+                            <constraint firstItem="qUm-gN-RgY" firstAttribute="top" secondItem="3RO-Ms-EI1" secondAttribute="bottom" constant="26" id="8Co-YF-9aE"/>
                             <constraint firstItem="jlO-J1-5J8" firstAttribute="trailing" secondItem="hQm-Lj-W7q" secondAttribute="trailing" id="AD9-Yr-iTO"/>
                             <constraint firstItem="jlO-J1-5J8" firstAttribute="leading" secondItem="hQm-Lj-W7q" secondAttribute="leading" id="FHA-Y7-vIG"/>
                             <constraint firstItem="EQr-y4-pPc" firstAttribute="top" secondItem="Qvj-nV-Qu7" secondAttribute="bottom" constant="18" id="U96-1e-c5A"/>
@@ -260,6 +267,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hQm-Lj-W7q"/>
                     </view>
+                    <connections>
+                        <outlet property="amountField" destination="3RO-Ms-EI1" id="9Wo-bu-gzN"/>
+                        <outlet property="nameField" destination="Qvj-nV-Qu7" id="Y2h-qv-HzO"/>
+                        <outlet property="tokenField" destination="EQr-y4-pPc" id="6kj-rt-XEx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uPJ-aR-2VT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
