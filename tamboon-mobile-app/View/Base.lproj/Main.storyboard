@@ -166,13 +166,107 @@
                     <view key="view" contentMode="scaleToFill" id="1a8-JH-Dbz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlO-J1-5J8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Donation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fze-5a-vjn">
+                                        <rect key="frame" x="83" y="28" width="209" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="KgR-xA-8ec"/>
+                                            <constraint firstAttribute="width" constant="209" id="tiA-oM-xja"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3r-Wb-hTO">
+                                        <rect key="frame" x="15" y="28" width="14" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="Wog-Hr-69F"/>
+                                            <constraint firstAttribute="width" constant="14" id="zuR-SB-6aG"/>
+                                        </constraints>
+                                        <state key="normal" image="WhiteBackArrow"/>
+                                        <connections>
+                                            <action selector="backButtonTappedWithSender:" destination="PN4-DO-rZi" eventType="touchUpInside" id="KK7-uX-POx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.48627450979999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="b3r-Wb-hTO" secondAttribute="bottom" constant="8" id="3Y9-bo-0V4"/>
+                                    <constraint firstItem="Fze-5a-vjn" firstAttribute="centerX" secondItem="jlO-J1-5J8" secondAttribute="centerX" id="5Xy-sC-9hA"/>
+                                    <constraint firstAttribute="height" constant="65" id="9DS-b1-vWM"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fze-5a-vjn" secondAttribute="bottom" constant="8" id="9Lt-Pl-iap"/>
+                                    <constraint firstItem="b3r-Wb-hTO" firstAttribute="leading" secondItem="jlO-J1-5J8" secondAttribute="leading" constant="15" id="qRf-Me-mU2"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Donar's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qvj-nV-Qu7">
+                                <rect key="frame" x="16" y="121" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="D0e-4G-1lP"/>
+                                    <constraint firstAttribute="height" constant="30" id="lNJ-Wo-Dux"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQr-y4-pPc">
+                                <rect key="frame" x="16" y="169" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CUs-on-yay"/>
+                                    <constraint firstAttribute="width" constant="343" id="IKJ-3t-5hY"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Donation Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3RO-Ms-EI1">
+                                <rect key="frame" x="16" y="207" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Mzb-AE-ntm"/>
+                                    <constraint firstAttribute="height" constant="30" id="Wws-GS-rAB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="175" translatesAutoresizingMaskIntoConstraints="NO" id="qUm-gN-RgY">
+                                <rect key="frame" x="27.5" y="263" width="320" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNd-22-9zZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
+                                        <state key="normal" title="Post Donation"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AL-0J-wg8">
+                                        <rect key="frame" x="272" y="0.0" width="48" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3RO-Ms-EI1" firstAttribute="top" secondItem="EQr-y4-pPc" secondAttribute="bottom" constant="8" id="38G-is-qNp"/>
+                            <constraint firstItem="Qvj-nV-Qu7" firstAttribute="top" secondItem="jlO-J1-5J8" secondAttribute="bottom" constant="56" id="3x4-lP-r2x"/>
+                            <constraint firstItem="EQr-y4-pPc" firstAttribute="centerX" secondItem="Qvj-nV-Qu7" secondAttribute="centerX" id="4fs-vp-TkX"/>
+                            <constraint firstItem="jlO-J1-5J8" firstAttribute="top" secondItem="1a8-JH-Dbz" secondAttribute="top" id="5nJ-Vu-tkS"/>
+                            <constraint firstItem="jlO-J1-5J8" firstAttribute="trailing" secondItem="hQm-Lj-W7q" secondAttribute="trailing" id="AD9-Yr-iTO"/>
+                            <constraint firstItem="jlO-J1-5J8" firstAttribute="leading" secondItem="hQm-Lj-W7q" secondAttribute="leading" id="FHA-Y7-vIG"/>
+                            <constraint firstItem="EQr-y4-pPc" firstAttribute="top" secondItem="Qvj-nV-Qu7" secondAttribute="bottom" constant="18" id="U96-1e-c5A"/>
+                            <constraint firstItem="qUm-gN-RgY" firstAttribute="centerX" secondItem="1a8-JH-Dbz" secondAttribute="centerX" id="dvY-B9-zwm"/>
+                            <constraint firstItem="3RO-Ms-EI1" firstAttribute="centerX" secondItem="EQr-y4-pPc" secondAttribute="centerX" id="eYW-tn-R3G"/>
+                            <constraint firstItem="Qvj-nV-Qu7" firstAttribute="centerX" secondItem="1a8-JH-Dbz" secondAttribute="centerX" id="o16-nR-wK0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hQm-Lj-W7q"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uPJ-aR-2VT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1990" y="-582"/>
+            <point key="canvasLocation" x="1989.5999999999999" y="-582.45877061469275"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="WhiteBackArrow" width="34" height="73"/>
+    </resources>
 </document>
